@@ -1,0 +1,1 @@
+This directory was made especially for my personal mastery over programming language

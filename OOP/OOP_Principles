@@ -1,0 +1,41 @@
+
+!1st Project
+
+    1.Single Responsibility Principles(SRP)
+    ~basically: a class should do one job ONLY.
+        -e.g|   a class shouldnt print, store data, calculate, and save files
+        -one class should act for each work load individually.
+
+    2.Open/Closed Principle(OCP)
+    ~basically: you should be able to add new behaviourwithout rewriting old code
+        - use inheritance(children class)
+        - use polymorphism
+            -what is polymorphism?
+                ~basically: having different objects respond to the same method name in their own way(same message, different behaviour)
+                    -e.g|   if u say area to a rectangle, it will do height * width & if u say to a square, it will do side *4
+                            the object chose what to do based on what shape area it got.
+        -used so you can extand behaviour
+
+    3.Liskov Substitution Principle (LSP)
+    ~basically: wherever the child is expected so should the parent be.
+    ~basically: LSP is the understanding that a child class should never change what the parent classs does?
+        - a parent class defines a contract. and the child class shouldnt break that contract.
+            - a child class shouldnt 1.remove behaviour 2.chnage the meaning of the method 3. add stricter rule than what the parent has throw new errors.
+
+    4.Interface Segregation Principle (ISP)
+    ~basically: dont force a class to implement methods that it doesnt necessarily need.
+
+    5.Dependency Inversion Principle (DIP)
+
+!2nd Project
+
+    1.Aggregation
+    ~
+    2.Composition
+    ~
+    3.Association in OOP
+    ~
+    4.Cohesion
+    ~
+    5.Coupling
+    ~

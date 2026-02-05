@@ -1,41 +1,74 @@
+Definitions:
+    !               =  parts
+    ~               =  definition
+    #               =  logic
+    ##              =  logic with actual technical terms
 
-!1st Project
+# !3rd Projects
+1.Abstraction
+    ~Focus on what an object does, not how it does it
+        #Pressing "start" on a car without knowing/caring how the engine works
 
-    1.Single Responsibility Principles(SRP)
-    ~basically: a class should do one job ONLY.
-        -e.g|   a class shouldnt print, store data, calculate, and save files
-        -one class should act for each work load individually.
+2.Encapsulating
+    ~Wrapping data + methods together and protecting them
+        #Your bank account -> you cant directly change the balance
 
-    2.Open/Closed Principle(OCP)
-    ~basically: you should be able to add new behaviourwithout rewriting old code
-        - use inheritance(children class)
-        - use polymorphism
-            -what is polymorphism?
-                ~basically: having different objects respond to the same method name in their own way(same message, different behaviour)
-                    -e.g|   if u say area to a rectangle, it will do height * width & if u say to a square, it will do side *4
-                            the object chose what to do based on what shape area it got.
-        -used so you can extand behaviour
+3.Inheritance
+    ~A class getting properties and method from another class
+        #A student is a person
 
-    3.Liskov Substitution Principle (LSP)
-    ~basically: wherever the child is expected so should the parent be.
+4.Polymorphism
+    ~Same method name, differnet behaviour
+        #The word "move" works differnetly for car(drives), bird(flies), human(walk)
+
+# !1st Project
+1.Single Responsibility Principles(SRP)
+    ~A class should do one job ONLY.
+        #Class(multiplier) should only multiply integers, not: type conversion, input validation, etc
+        ##Creating a class that has one and not multiple purposes
+
+2.Open/Closed Principle(OCP)
+    ~It allows you to add new behaviour without rewriting old code
+        #Class(Square) should be able to utilise area() from class(rectangle) that has method area.
+        ##Creating a behaviour(method) from a class that can be utilised in other class.
+
+3.Liskov Substitution Principle (LSP)
+    ~Wherever the child is expected so should the parent be.
     ~basically: LSP is the understanding that a child class should never change what the parent classs does?
         - a parent class defines a contract. and the child class shouldnt break that contract.
             - a child class shouldnt 1.remove behaviour 2.chnage the meaning of the method 3. add stricter rule than what the parent has throw new errors.
 
-    4.Interface Segregation Principle (ISP)
+4.Interface Segregation Principle (ISP)
     ~basically: dont force a class to implement methods that it doesnt necessarily need.
 
-    5.Dependency Inversion Principle (DIP)
+5.Dependency Inversion Principle (DIP)
 
-!2nd Project
+# !2nd Project
 
-    1.Aggregation
-    ~
-    2.Composition
-    ~
-    3.Association in OOP
-    ~
-    4.Cohesion
-    ~
-    5.Coupling
-    ~
+1.Aggregation (the process of gathering, combining, or collecting seperate parts)
+    ~A "whole-part" (whole = class) (part = instances) relationship, but the part can exist independently of the whole.
+        #A library has a books, but a book can exist even if the library is destroyed
+        ##Creating an object(another class) that can be used in a class and can be used outside of it.
+
+2.Composition (puttting together)
+    ~A strong "whole-part" relationship, where the part cannot exist without the whole
+        #A room cannot exist without a house. If the house is demolished, the rooms are gone too.
+        ##Creating an object that doesnt exist without its class
+
+3.Association in OOP (being united)
+    ~A general relationship between two classes where one class "uses" or "knows about" another.
+        #A teacher teaches students, but a teacher can exist without students, and a students can exist without a teacher.
+        ##Creating a class that works with another class but none owns the other.
+
+4.Cohesion (sticking together/forming a united whole)
+    ~How closely related and focused the responsibilies of a single class/module are.
+        #A class(Car) that handles: 1.engine operations 2.steering 3.braking(they are cohesive)
+        #A class(Car) that handles: 1.steering 2.networking 3.logging 4. engine(unrelated/not cohesive)
+        ##Creating a class that has one character.
+
+5.Coupling (joining/connecting)
+    ~How dependant one class/module is on another, They should not.
+        #Class(A) calls multiple methods of class(B) and relies on class(B)
+        #Classs(A) interacts with class(B) only via simple interface,so changes in B don't break A.
+        ##Creating independent classes that doesnt rely on one another.
+
